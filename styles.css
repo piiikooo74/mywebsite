@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff6f91, #ffb3c1); /* Pink gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Main Card */
+.card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Card */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Button Styling */
+.choice-btn {
+    background-color: #FF4081; /* Pink button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    width: 200px;
+}
+
+/* Button Hover Effects */
+.choice-btn:hover {
+    background-color: #f50057;
+}
+
+.choice-btn:active {
+    transform: scale(0.95);
+}
+
+/* Enlarging Button After Repetition */
+.choice-btn.enlarged {
+    transform: scale(1.1);
+}
+
+/* Result Text */
+#result {
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Heart Container */
+.heart-container {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out forwards;
+    font-size: 40px;
+}
+
+/* Animation for Button Text and Heart */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .card {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .choice-btn {
+        padding: 12px 25px;
+    }
+}
